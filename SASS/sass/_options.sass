@@ -1,0 +1,42 @@
+// ============================
+// MAIN COLORS
+// ============================
+
+$mainC1: #ff9b51 //orange
+$mainC2: #333333 //grey
+$mainC3: rgb(134, 135, 139) //light-grey
+
+// ============================
+// MEDIA
+// ============================
+
+$mediaBp: (1130px, 767px, 640px, 480px, 320px)
+
+// ============================
+// FUNCTIONS
+// ============================
+
+@function col-width($n)
+	@if $n == auto
+		@return auto
+	@else
+		@return calc(100% / #{$n}) 
+
+// ============================
+// MIXINS
+// ============================
+
+@mixin flex ($d: flex, $jc: flex-start, $fw: nowrap, $ai: stretch, $fd: row)
+	display: $d
+	flex-flow: $fd $fw
+	justify-content: $jc
+	align-items: $ai
+
+
+@mixin grid ($s: 15px, $w: nowrap, $c: auto)
+	&-grid
+		@include flex($fw: $w)
+		margin: -#{$s}
+		&__col
+			width: col-width($c) 
+			padding: $s

@@ -1,0 +1,104 @@
+// ============================
+// RESETS
+// ============================
+table, thead, tbody, tfoot, tr, th, td
+	margin: 0
+	padding: 0
+	border: none
+	border-collapse: inherit
+	border-spacing: 0
+	border-color: inherit
+	vertical-align: inherit
+	font-weight: inherit
+	-webkit-border-horizontal-spacing: 0
+	-webkit-border-vertical-spacing: 0
+
+*, *:before, *:after
+	margin: 0
+	padding: 0
+
+input
+	border-radius: 0 
+	box-shadow: none !important
+
+ul, ol
+	list-style-type: none
+
+a
+	text-decoration: none
+	cursor: pointer
+
+html
+	-webkit-text-size-adjust: 100%
+	color: $mainC2
+
+body 
+	font-family: 'OpenSans', sans-serif
+	font-weight: normal
+	font-style: normal
+
+h1
+	font-weight: 400
+	font-family: 'Raleway', sans-serif
+
+input:focus,
+label:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus,
+a:focus
+	outline: none
+
+*, *:before, *:after, input, textarea, button, select
+	box-sizing: border-box
+
+main > *:nth-child(odd)
+	background-color: rgb(245, 245, 245)
+
+.slick-slide:focus
+	outline: none
+
+.title
+	font-family: Raleway
+	font-weight: normal
+	position: relative
+	padding-bottom: 1.56rem
+	&:before
+		content: ""
+		width: 65px
+		border-bottom: 2px solid $mainC1
+		position: absolute
+		left: 0
+		bottom: 0
+
+.button
+	display: inline-block
+	font-family: "MyriadPro"	
+	font-weight: normal
+	color: #FFF
+	text-transform: capitalize
+	font-size: 15px
+	border: none
+	background-color: transparent
+	transition: .2s
+	cursor: pointer
+	&_theme
+		&_white
+			border: 1px solid #fff
+			box-shadow: inset 0 0 0 1px rgba(#fff, .8)
+			padding: .66em 2em
+			&:hover
+				background-color: #fff
+				color: $mainC2
+		&_orange
+			background-color: $mainC1
+			border-radius: 4px
+			padding: 0.85em 1.42em
+			box-shadow: 0 1px 1px 0 rgba(#000, .2)
+			&:hover
+				background-color: $mainC2
+
+
+
+
